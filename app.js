@@ -15,10 +15,12 @@ app.use(morgan("tiny"));
 
 //routers
 const productsRouter = require("./routes/products");
+const categoriesRouter = require("./routes/categories");
 
 const api = process.env.API_URL;
 
 app.use(`${api}/products`, productsRouter);
+app.use(`${api}/categories`, categoriesRouter);
 
 //Database
 mongoose
